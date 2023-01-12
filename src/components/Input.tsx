@@ -9,7 +9,7 @@ export const Input: FC<Props> = ({ id, ...props }) => {
     <div>
       <input
         id={id}
-        className="input input-bordered border-4 border-slate-900 w-full"
+        className="input input-bordered border-2 border-slate-500 w-full"
         {...props}
       />
     </div>
