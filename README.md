@@ -1,6 +1,6 @@
 # ToDoList Project
 
-A website that shows 'Now Playing' movies, your favorited movies, and movie's details. <br />
+A website that can input a task you want to do to a list, your tasks, and the task details. <br />
 Made with *React Vite* and some libraries such as *Tailwind CSS*, *Daisy UI*, *React Icons*, etc.  
 
 Ensure you have a proper browser, then click link below to check the website. <br />
