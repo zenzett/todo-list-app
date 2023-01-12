@@ -18,7 +18,7 @@ export const Button: FC<ButtonProps> = ({ label, ...props }) => {
 
 export const EditButton: FC<ButtonProps> = () => {
   return (
-    <button className="rounded-md p-2 lg:p-3 w-fit tracking-wider m-0 text-2xl bg-yellow-600 text-gray-900 border-transparent">
+    <button className="rounded-md p-2 lg:p-3 w-fit tracking-wider m-0 text-2xl duration-200 active:scale-90 bg-yellow-600 text-gray-900 border-transparent">
       <RxPencil2 />
     </button>
   );
@@ -26,7 +26,7 @@ export const EditButton: FC<ButtonProps> = () => {
 
 export const DeleteButton: FC<ButtonProps> = () => {
   return (
-    <button className="rounded-md p-2 lg:p-3 w-fit tracking-wider m-0 text-2xl bg-red-600 text-gray-900 border-transparent">
+    <button className="rounded-md p-2 lg:p-3 w-fit tracking-wider m-0 text-2xl duration-200 active:scale-90 bg-red-600 text-gray-900 border-transparent">
       <RxTrash />
     </button>
   );
