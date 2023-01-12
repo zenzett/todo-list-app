@@ -7,7 +7,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<ButtonProps> = ({ label, ...props }) => {
   return (
-    <button className="btn w-full tracking-wider" {...props}>
+    <button
+      className="btn w-fit text-xs px-3 lg:tracking-wider lg:text-sm"
+      {...props}
+    >
       {label}
     </button>
   );
@@ -15,7 +18,7 @@ export const Button: FC<ButtonProps> = ({ label, ...props }) => {
 
 export const EditButton: FC<ButtonProps> = () => {
   return (
-    <button className="btn w-full tracking-wider text-2xl bg-yellow-600 border-transparent">
+    <button className="rounded-md p-2 lg:p-3 w-fit tracking-wider m-0 text-2xl bg-yellow-600 text-gray-900 border-transparent">
       <RxPencil2 />
     </button>
   );
@@ -23,7 +26,7 @@ export const EditButton: FC<ButtonProps> = () => {
 
 export const DeleteButton: FC<ButtonProps> = () => {
   return (
-    <button className="btn w-full tracking-wider text-2xl bg-red-600 border-transparent">
+    <button className="rounded-md p-2 lg:p-3 w-fit tracking-wider m-0 text-2xl bg-red-600 text-gray-900 border-transparent">
       <RxTrash />
     </button>
   );

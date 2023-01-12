@@ -57,32 +57,33 @@ const Index = () => {
 
   return (
     <Layout>
-      <div className="px-10">
-        <p className="m-10 flex justify-center font-extrabold text-6xl">
+      <div className="px-5 lg:px-20">
+        <p className="m-5 text-3xl flex justify-center font-extrabold lg:text-6xl lg:m-10">
           TO DO LIST
         </p>
 
-        <div className="border-4 rounded-2xl w-full flex flex-col px-40 py-10 shadow-xl">
-          <p className="pb-2 w-full font-semibold text-xl">Add a task</p>
+        <div className="border-4 px-5 py-5 rounded-2xl w-full flex flex-col shadow-xl lg:px-20 lg:pt-10">
+          <p className="mb-2 w-full font-semibold lg:text-xl">Add a task</p>
           <Input
             id="input-task"
             value={inputTask}
             onChange={(e) => setInputTask(e.target.value)}
           />
-          <div className="py-5 px-4">{inputTask}</div>
-          <Button label="Add Task" onClick={() => handleAddTask()} />
+          <div className="mt-3 flex justify-end">
+            <Button label="Submit" onClick={() => handleAddTask()} />
+          </div>
         </div>
-        <div className="border-4 rounded-2xl w-full flex flex-col my-10 px-40 py-10 shadow-xl">
-          <p className="border-b-4 border-b-slate-900 py-5 w-full font-semibold text-xl">
-            My tasks
+        <div className="border-4 my-10 px-5 py-8 rounded-2xl w-full flex flex-col shadow-xl lg:px-20 lg:pt-10">
+          <p className="border-b-2 border-slate-500 flex justify-center pb-7 w-full text-lg font-semibold lg:text-xl">
+            My Tasks
           </p>
           {todos.map((todo) => (
             <div
               key={todo.id}
-              className="w-full flex justify-between py-5 border-b-2 items-center"
+              className="w-full flex justify-between py-4 border-b-2 items-center lg:py-3"
             >
-              <p className="text-lg lg:w-[44em]">{todo.task}</p>
-              <div className="grid grid-cols-2 gap-3">
+              <p className="lg:text-lg w-full">{todo.task}</p>
+              <div className="w-fit grid grid-cols-2 gap-4 md:mx-2">
                 <EditButton label="Edit" onClick={() => handleEditTask()} />
                 <DeleteButton
                   label="Delete"
